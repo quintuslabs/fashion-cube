@@ -9,7 +9,7 @@ class NavBar extends Component {
 
   render() {
     const { departments } = this.props;
-    console.log(this.props);
+
     return (
       <div className="main_nav_container">
         <div className="container">

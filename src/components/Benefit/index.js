@@ -2,7 +2,7 @@ import React from "react";
 
 function Benefit(params) {
   return (
-    <div className="benefit">
+    <div className="benefit" data-aos="fade-up">
       <div className="container">
         <div className="row benefit_row">
           <div className="col-lg-3 benefit_col">

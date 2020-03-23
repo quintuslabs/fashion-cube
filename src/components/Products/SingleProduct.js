@@ -1,9 +1,13 @@
 import React from "react";
+import jumpTo from "../../modules/Navigation";
 
 function SingleProduct(props) {
   const { productItem } = props;
   return (
-    <div className="product-item men">
+    <div
+      className="product-item men"
+      onClick={() => jumpTo(`/single-product/${productItem._id}`)}
+    >
       <div className="product discount product_filter">
         <div className="product_image">
           <img src={productItem.imagePath} alt="" className="img-fluid" />

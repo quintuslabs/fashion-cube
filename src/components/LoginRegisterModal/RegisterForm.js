@@ -5,6 +5,8 @@ import { DEFAULT_RULE, EMAIL_RULE } from "../../utils/Validator/rule";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { userRegister } from "../../redux/actions/RegisterAction";
+import LoadingButton from "../LoadingButton";
+
 class RegisterForm extends Component {
   constructor(props) {
     super(props);
@@ -33,15 +35,17 @@ class RegisterForm extends Component {
       console.log("Password Error");
       return;
     }
-
+    this.setState({ loading: true });
     this.props
       .userRegister(name, email, password, password)
       .then(res => {
         console.log(res);
         this.props.loginClicked();
+        this.setState({ loading: false });
       })
       .catch(error => {
         console.log(error.response);
+        this.setState({ loading: false });
       });
   };
 
@@ -92,13 +96,14 @@ class RegisterForm extends Component {
             <i className="fa fa-lock"></i>
           </div>
           <span className="alert">Invalid Credentials</span>
-          <button
+          <LoadingButton
             type="button"
             className="log-btn"
+            loading={this.state.loading}
             onClick={() => this.handleSubmit()}
           >
             Register
-          </button>
+          </LoadingButton>
           <div
             onClick={this.props.loginClicked}
             style={{

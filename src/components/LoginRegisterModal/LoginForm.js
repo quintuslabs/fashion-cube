@@ -5,6 +5,7 @@ import jumpTo from "../../modules/Navigation";
 import Validator from "../../utils/Validator";
 import { DEFAULT_RULE, EMAIL_RULE } from "../../utils/Validator/rule";
 import PropTypes from "prop-types";
+import LoadingButton from "../LoadingButton";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -33,17 +34,18 @@ class LoginForm extends Component {
       console.log("Password Error");
       return;
     }
-
+    this.setState({ loading: true });
     this.props
       .userLogin(email, password)
       .then(res => {
         console.log(res);
-
+        this.setState({ loading: false });
         window.location.reload();
       })
       .catch(error => {
         // console.log('loginsignin error')
         console.log(error.response);
+        this.setState({ loading: false });
       });
   };
 
@@ -86,13 +88,14 @@ class LoginForm extends Component {
           >
             Lost your password?
           </a>
-          <button
+          <LoadingButton
             type="button"
             className="log-btn"
+            loading={this.state.loading}
             onClick={() => this.handleSubmit()}
           >
             Log in
-          </button>
+          </LoadingButton>
           <div
             onClick={this.props.registerClicked}
             style={{

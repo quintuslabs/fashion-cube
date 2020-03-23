@@ -5,7 +5,9 @@ import Auth from "../../modules/Auth";
 import HomeBanner from "../../components/HomeBanner";
 import CategoryBanner from "../../components/CategoryBanner/CategoryBanner";
 import NewArrivals from "../../components/Products/NewArrivals";
+import BestSeller from "../../components/Products/BestSeller";
 import Benefit from "../../components/Benefit";
+import Advertisement from "../../components/Advertisement";
 
 class Home extends Component {
   constructor(props) {
@@ -22,7 +24,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { products, departments, applyFilters } = this.props;
     return (
       <div>
@@ -32,6 +33,10 @@ class Home extends Component {
           <NewArrivals products={products} departments={departments} />
         ) : null}
         <Benefit />
+        <Advertisement />
+        {products ? (
+          <BestSeller products={products} departments={departments} />
+        ) : null}
       </div>
     );
   }

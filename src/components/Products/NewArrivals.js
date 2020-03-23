@@ -13,10 +13,6 @@ class NewArrivals extends Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({ products: this.props.products });
-  }
-
   optionClicked(option) {
     let FilterList = this.state.productsBAK.filter(
       item => item.department === option

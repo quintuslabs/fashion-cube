@@ -50,17 +50,17 @@
 }
 
 .log-btn {
-  background: #fe4c50;
+  background-color: #fe4c50 !important;
   dispaly: inline-block;
   width: 100%;
   font-size: 16px;
   height: 40px;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
-  border-radius: 20px;
+  border-radius: 20px !important;
   margin-bottom: 10px;
 }
 

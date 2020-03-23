@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import LoginRegister from "../LoginRegisterModal";
 
+import Auth from "../../modules/Auth";
+
 class TopNavBar extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +13,12 @@ class TopNavBar extends Component {
   showHideModal = () => {
     this.setState({ modalShow: !this.state.modalShow });
   };
+
+  logout = () => {
+    Auth.logout();
+    window.location.reload();
+  };
+
   render() {
     return (
       <div className={`top_nav ${this.props.className}`}>
@@ -64,32 +72,60 @@ class TopNavBar extends Component {
                       </li>
                     </ul>
                   </li>
-                  <li className="account">
-                    <a href="#">
-                      My Account
-                      <i className="fa fa-angle-down"></i>
-                    </a>
-                    <ul className="account_selection">
-                      <li>
-                        <a href="#" onClick={() => this.showHideModal("Login")}>
-                          <i
-                            className="fas fa-sign-in-alt"
-                            aria-hidden="true"
-                          ></i>
-                          Sign In
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          onClick={() => this.showHideModal("Register")}
-                        >
-                          <i className="fa fa-user-plus" aria-hidden="true"></i>
-                          Register
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  {Auth.getUserDetails !== undefined &&
+                  Auth.getUserDetails !== null &&
+                  Auth.getToken() !== undefined ? (
+                    <li className="account">
+                      <a href="#">
+                        {`Welcome ${Auth.getUserDetails().user_name}`}
+                        <i className="fa fa-angle-down"></i>
+                      </a>
+                      <ul className="account_selection">
+                        <li>
+                          <a href="#" onClick={() => this.logout()}>
+                            <i
+                              className="fas fa-sign-in-alt"
+                              aria-hidden="true"
+                            ></i>
+                            Logout
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  ) : (
+                    <li className="account">
+                      <a href="#">
+                        My Account
+                        <i className="fa fa-angle-down"></i>
+                      </a>
+                      <ul className="account_selection">
+                        <li>
+                          <a
+                            href="#"
+                            onClick={() => this.showHideModal("Login")}
+                          >
+                            <i
+                              className="fas fa-sign-in-alt"
+                              aria-hidden="true"
+                            ></i>
+                            Sign In
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            onClick={() => this.showHideModal("Register")}
+                          >
+                            <i
+                              className="fa fa-user-plus"
+                              aria-hidden="true"
+                            ></i>
+                            Register
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  )}
                 </ul>
               </div>
             </div>

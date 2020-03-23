@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { userLogin } from "../../redux/actions/LoginAction";
 import jumpTo from "../../modules/Navigation";
+import Validator from "../../utils/Validator";
+import { DEFAULT_RULE, EMAIL_RULE } from "../../utils/Validator/rule";
 
 class LoginForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      loading: false
     };
   }
 
@@ -18,8 +21,18 @@ class LoginForm extends Component {
   };
 
   handleSubmit = () => {
-    let email = "bob@bob.com";
-    let password = "Ab123123";
+    // let email = "bob@bob.com";
+    // let password = "Ab123123";
+    const { email, password } = this.state;
+    if (!Validator(email, EMAIL_RULE)) {
+      console.log("email Error");
+      return;
+    }
+    if (!Validator(password, DEFAULT_RULE)) {
+      console.log("Password Error");
+      return;
+    }
+
     this.props
       .userLogin(email, password)
       .then(res => {

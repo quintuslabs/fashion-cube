@@ -13,7 +13,12 @@ class BaseLayout extends Component {
     this.handleScroll = this.handleScroll.bind(this);
   }
   componentDidMount() {
+    window.scrollTo(0, 0);
     window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillMount() {
+    window.scrollTo(0, 0);
   }
 
   componentWillUnmount() {

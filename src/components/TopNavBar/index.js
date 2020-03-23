@@ -7,11 +7,19 @@ class TopNavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalShow: false
+      modalShow: false,
+      login: true
     };
   }
   showHideModal = () => {
-    this.setState({ modalShow: !this.state.modalShow });
+    this.setState({ modalShow: false });
+  };
+
+  loginClicked = () => {
+    this.setState({ modalShow: true, login: true });
+  };
+  registerClicked = () => {
+    this.setState({ modalShow: true, login: false });
   };
 
   logout = () => {
@@ -100,10 +108,7 @@ class TopNavBar extends Component {
                       </a>
                       <ul className="account_selection">
                         <li>
-                          <a
-                            href="#"
-                            onClick={() => this.showHideModal("Login")}
-                          >
+                          <a href="#" onClick={() => this.loginClicked()}>
                             <i
                               className="fas fa-sign-in-alt"
                               aria-hidden="true"
@@ -112,10 +117,7 @@ class TopNavBar extends Component {
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="#"
-                            onClick={() => this.showHideModal("Register")}
-                          >
+                          <a href="#" onClick={() => this.registerClicked()}>
                             <i
                               className="fa fa-user-plus"
                               aria-hidden="true"
@@ -131,10 +133,15 @@ class TopNavBar extends Component {
             </div>
           </div>
         </div>
-        <LoginRegister
-          show={this.state.modalShow}
-          onHide={() => this.showHideModal("Hide")}
-        />
+        {this.state.modalShow ? (
+          <LoginRegister
+            show={this.state.modalShow}
+            login={this.state.login}
+            registerClicked={() => this.registerClicked()}
+            loginClicked={() => this.loginClicked()}
+            onHide={() => this.showHideModal()}
+          />
+        ) : null}
       </div>
     );
   }

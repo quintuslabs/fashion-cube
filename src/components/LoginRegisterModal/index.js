@@ -3,28 +3,42 @@ import { Modal, Button } from "react-bootstrap";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import "./style.css";
+import PropTypes from "prop-types";
+class LoginRegister extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showlogin: this.props.showlogin
+    };
+  }
 
-function LoginRegister(props) {
-  return (
-    <Modal
-      {...props}
-      size="sm"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-      id="loginModal"
-      className="modal fade login"
-    >
-      <Modal.Body>
-        <div className="modal--close--button" onClick={props.onHide}>
-          <i className="fas fa-times"></i>
-        </div>
-        <LoginForm />
-      </Modal.Body>
-      {/* <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer> */}
-    </Modal>
-  );
+  render() {
+    return (
+      <Modal
+        {...this.props}
+        size="sm"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        id="loginModal"
+        className="modal fade login"
+      >
+        <Modal.Body>
+          <div className="modal--close--button" onClick={this.props.onHide}>
+            <i className="fas fa-times"></i>
+          </div>
+          {this.props.login ? (
+            <LoginForm registerClicked={() => this.props.registerClicked()} />
+          ) : (
+            <RegisterForm loginClicked={() => this.props.loginClicked()} />
+          )}
+        </Modal.Body>
+      </Modal>
+    );
+  }
 }
-
+LoginRegister.propTypes = {
+  login: PropTypes.bool,
+  registerClicked: PropTypes.func,
+  loginClicked: PropTypes.func
+};
 export default LoginRegister;

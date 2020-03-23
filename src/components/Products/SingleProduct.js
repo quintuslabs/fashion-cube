@@ -9,7 +9,7 @@ function SingleProduct(props) {
           <img src={productItem.imagePath} alt="" className="img-fluid" />
         </div>
         <div className="favorite favorite_left">
-          <i class="far fa-heart"></i>
+          <i className="far fa-heart"></i>
         </div>
         {/* <div className="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
           <span>-$20</span>

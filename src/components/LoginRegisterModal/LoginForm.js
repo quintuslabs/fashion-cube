@@ -4,6 +4,7 @@ import { userLogin } from "../../redux/actions/LoginAction";
 import jumpTo from "../../modules/Navigation";
 import Validator from "../../utils/Validator";
 import { DEFAULT_RULE, EMAIL_RULE } from "../../utils/Validator/rule";
+import PropTypes from "prop-types";
 
 class LoginForm extends Component {
   constructor(props) {
@@ -47,7 +48,6 @@ class LoginForm extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <div className="login-form">
@@ -79,7 +79,11 @@ class LoginForm extends Component {
             <i className="fa fa-lock"></i>
           </div>
           <span className="alert">Invalid Credentials</span>
-          <a className="link" href="#">
+          <a
+            className="link"
+            href="#"
+            onClick={this.props.forgotPasswordClicked}
+          >
             Lost your password?
           </a>
           <button
@@ -89,11 +93,27 @@ class LoginForm extends Component {
           >
             Log in
           </button>
+          <div
+            onClick={this.props.registerClicked}
+            style={{
+              textAlign: "center",
+              fontSize: 12,
+              color: "#c4c4c4",
+              cursor: "pointer"
+            }}
+          >
+            New user ? Please Register
+          </div>
         </div>
       </div>
     );
   }
 }
+
+LoginForm.propTypes = {
+  forgotPasswordClicked: PropTypes.func,
+  registerClicked: PropTypes.func
+};
 
 const mapDispatchToProps = {
   userLogin

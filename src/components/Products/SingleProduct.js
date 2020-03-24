@@ -23,8 +23,8 @@ function SingleProduct(props) {
             <a href="single.html">{productItem.title}</a>
           </h6>
           <div className="product_price">
-            Rs. {productItem.price}
-            <span> Rs. {(parseFloat(productItem.price) + 30).toFixed(2)}</span>
+            ₹ {productItem.price}
+            <span> ₹ {(parseFloat(productItem.price) + 30).toFixed(2)}</span>
           </div>
         </div>
       </div>

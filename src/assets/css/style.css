@@ -1360,9 +1360,11 @@ section {
 }
 .single_product_thumbnails ul li {
   position: relative;
-  height: 136px;
-  margin-bottom: 30px;
+  height: 130px;
+  margin-bottom: 6px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .single_product_thumbnails ul li::after {
   display: block;
@@ -1380,7 +1382,10 @@ section {
   visibility: visible;
 }
 .single_product_thumbnails ul li img {
-  width: 100%;
+  width: auto;
+  text-align: center;
+  max-width: 130px;
+  max-height: 130px;
 }
 .image_col {
   padding-right: 30px;
@@ -1513,8 +1518,6 @@ section {
   color: #b5aec4;
 }
 .add_to_cart_button {
-  width: 160px;
-  margin-left: 19px;
   font-size: 12px !important;
 }
 .product_favorite {
@@ -1544,6 +1547,26 @@ section {
 .red_button.product-add_to_cart_button a:hover {
   text-decoration: none;
   color: white;
+}
+
+.red_cart_button.product_add_to_cart_icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  background: #fe4c50;
+  color: white;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.3s ease;
+}
+span.minus.disabled {
+  color: #b5aec4;
+  pointer-events: none;
+  cursor: none;
 }
 /*********************************
 10. Newsletter

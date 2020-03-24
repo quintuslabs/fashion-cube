@@ -211,6 +211,26 @@
     margin-top: 20px;
     margin-bottom: 65px;
   }
+
+  .single_product_thumbnails > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: auto;
+  }
+  .single_product_thumbnails {
+    height: auto;
+  }
+  .single_product_thumbnails ul li {
+    position: relative;
+    height: 130px;
+    width: 20%;
+    margin-bottom: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 /************

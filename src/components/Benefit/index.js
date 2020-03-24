@@ -19,7 +19,7 @@ function Benefit(params) {
           <div className="col-lg-3 benefit_col">
             <div className="benefit_item d-flex flex-row align-items-center">
               <div className="benefit_icon">
-                <i className="fa fa-money" aria-hidden="true"></i>
+                <i class="far fa-money-bill-alt"></i>
               </div>
               <div className="benefit_content">
                 <h6>cach on delivery</h6>
@@ -41,7 +41,7 @@ function Benefit(params) {
           <div className="col-lg-3 benefit_col">
             <div className="benefit_item d-flex flex-row align-items-center">
               <div className="benefit_icon">
-                <i className="fa fa-clock-o" aria-hidden="true"></i>
+                <i class="far fa-clock"></i>
               </div>
               <div className="benefit_content">
                 <h6>opening all week</h6>

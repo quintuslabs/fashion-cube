@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import HomeCartView from "../HomeCartView";
 
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      modalShow: false
+    };
   }
 
   componentDidMount() {
@@ -13,10 +16,12 @@ class NavBar extends Component {
     }
   }
 
+  showHideModal = () => {
+    this.setState({ modalShow: !this.state.modalShow });
+  };
+
   render() {
     const { departments, cart } = this.props;
-
-    console.log("cart==>", cart);
 
     return (
       <div className="main_nav_container">
@@ -77,9 +82,9 @@ class NavBar extends Component {
                     </a>
                   </li>
                   <li className="checkout">
-                    <a href="#">
-                      <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                      {cart && (
+                    <a href="#" onClick={() => this.showHideModal()}>
+                      <i className="fas fa-shopping-bag"></i>
+                      {cart.totalQty !== undefined && (
                         <span id="checkout_items" className="checkout_items">
                           {cart.totalQty}
                         </span>
@@ -94,6 +99,13 @@ class NavBar extends Component {
             </div>
           </div>
         </div>
+        {this.state.modalShow ? (
+          <HomeCartView
+            cart={cart}
+            show={this.state.modalShow}
+            onHide={() => this.showHideModal()}
+          />
+        ) : null}
       </div>
     );
   }

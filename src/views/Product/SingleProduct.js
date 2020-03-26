@@ -44,7 +44,6 @@ class SingleProduct extends Component {
       )
       .then(res => {
         console.log(res);
-        window.location.reload();
       });
   };
 

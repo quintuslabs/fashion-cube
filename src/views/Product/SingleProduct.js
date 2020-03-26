@@ -37,6 +37,17 @@ class SingleProduct extends Component {
     }
   };
 
+  addToBag = () => {
+    this.props
+      .postCart(
+        this.state.id || this.props.location.pathname.split("/").slice(-1)[0]
+      )
+      .then(res => {
+        console.log(res);
+        window.location.reload();
+      });
+  };
+
   render() {
     return (
       <div className="container single_product_container">
@@ -115,7 +126,7 @@ class SingleProduct extends Component {
                   </div>
                   <div className="free_delivery d-flex flex-row align-items-center justify-content-center">
                     <span>
-                      <i class="fas fa-truck"></i>
+                      <i className="fas fa-truck"></i>
                     </span>
                     <span>free delivery</span>
                   </div>
@@ -170,13 +181,16 @@ class SingleProduct extends Component {
                         <i className="fa fa-plus" aria-hidden="true"></i>
                       </span>
                     </div>
-                    <div className="red_button product-add_to_cart_button">
+                    <div
+                      className="red_button product-add_to_cart_button"
+                      onClick={this.addToBag}
+                    >
                       <a href="#">add to cart</a>
                     </div>
 
                     {/* <div className="red_cart_button product_add_to_cart_icon">
                       <a href="#">
-                        <i class="fas fa-cart-arrow-down"></i>
+                        <i className="fas fa-cart-arrow-down"></i>
                       </a>
                     </div> */}
 

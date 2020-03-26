@@ -4,11 +4,11 @@ import jumpTo from "../../modules/Navigation";
 function SingleProduct(props) {
   const { productItem } = props;
   return (
-    <div
-      className="product-item men"
-      onClick={() => jumpTo(`/single-product/${productItem._id}`)}
-    >
-      <div className="product discount product_filter">
+    <div className="product-item men">
+      <div
+        className="product discount product_filter"
+        onClick={() => jumpTo(`/single-product/${productItem._id}`)}
+      >
         <div className="product_image">
           <img src={productItem.imagePath} alt="" className="img-fluid" />
         </div>
@@ -28,10 +28,11 @@ function SingleProduct(props) {
           </div>
         </div>
       </div>
-      <div className="red_button add_to_cart_button">
-        <div onClick={() => alert(" hIii ")} style={{ color: "#ffffff" }}>
-          add to cart
-        </div>
+      <div
+        className="red_button add_to_cart_button"
+        onClick={() => props.addToBag(productItem._id)}
+      >
+        <div style={{ color: "#ffffff" }}>add to cart</div>
       </div>
     </div>
   );

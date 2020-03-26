@@ -7,8 +7,16 @@ class NavBar extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    if (Object.keys(this.props.cart).length < 1) {
+      this.props.getCartByUserId();
+    }
+  }
+
   render() {
-    const { departments } = this.props;
+    const { departments, cart } = this.props;
+
+    console.log("cart==>", cart);
 
     return (
       <div className="main_nav_container">
@@ -71,9 +79,11 @@ class NavBar extends Component {
                   <li className="checkout">
                     <a href="#">
                       <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                      <span id="checkout_items" className="checkout_items">
-                        2
-                      </span>
+                      {cart && (
+                        <span id="checkout_items" className="checkout_items">
+                          {cart.totalQty}
+                        </span>
+                      )}
                     </a>
                   </li>
                 </ul>

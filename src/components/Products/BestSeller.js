@@ -29,7 +29,10 @@ class BestSeller extends Component {
                     key={index}
                     data-aos="zoom-in"
                   >
-                    <SingleProduct productItem={item} />
+                    <SingleProduct
+                      productItem={item}
+                      addToBag={this.props.addToBag}
+                    />
                   </div>
                 );
               })}

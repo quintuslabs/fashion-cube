@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SingleProduct from "./SingleProduct";
 import Heading from "../Heading";
-import HorizontalFilter from "../HorizontalFilter";
+import PropTypes from "prop-types";
 class NewArrivals extends Component {
   constructor(props) {
     super(props);
@@ -25,8 +25,12 @@ class NewArrivals extends Component {
     this.setState({ selectedOption: option });
   }
 
+  addToBag = id => {
+    console.log(id);
+  };
   render() {
     const { products, departments } = this.state;
+
     return (
       <div className="new_arrivals" data-aos="fade-up">
         <div className="container">
@@ -81,7 +85,10 @@ class NewArrivals extends Component {
                     key={index}
                     data-aos="zoom-in"
                   >
-                    <SingleProduct productItem={item} />
+                    <SingleProduct
+                      productItem={item}
+                      addToBag={this.props.addToBag}
+                    />
                   </div>
                 );
               })}
@@ -91,5 +98,9 @@ class NewArrivals extends Component {
     );
   }
 }
+
+NewArrivals.propTypes = {
+  addToCart: PropTypes.func
+};
 
 export default NewArrivals;

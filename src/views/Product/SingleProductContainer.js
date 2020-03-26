@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import SingleProduct from "./SingleProduct";
 import { getProduct } from "../../redux/actions/productAction";
 import { getVariantsByProductId } from "../../redux/actions/variantsAction";
-// import {postCart} from '../../redux/action/cartAction'
+import { postCart } from "../../redux/actions/cartAction";
 
 const mapStoreToProps = state => ({
   product: state.product.product,
@@ -10,8 +10,8 @@ const mapStoreToProps = state => ({
 });
 const mapDispatchToProps = {
   getProduct,
-  getVariantsByProductId
-  // postCart
+  getVariantsByProductId,
+  postCart
 };
 
 export default connect(mapStoreToProps, mapDispatchToProps)(SingleProduct);

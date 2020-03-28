@@ -37,3 +37,28 @@
   border-radius: 0;
   border: none;
 }
+
+.shopping--cart--container {
+  margin-top: 25vh;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.shopping--cart--item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.cart--item--img {
+  text-align: center;
+}
+.cart--item--img > img {
+  max-height: 150px;
+  max-width: 150px;
+}

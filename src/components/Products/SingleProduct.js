@@ -20,7 +20,7 @@ function SingleProduct(props) {
         </div> */}
         <div className="product_info">
           <h6 className="product_name">
-            <a href="single.html">{productItem.title}</a>
+            <div>{productItem.title}</div>
           </h6>
           <div className="product_price">
             ₹ {productItem.price}

@@ -54,7 +54,7 @@ class NavBar extends Component {
                                   {item.categories.split(",").map((i, idx) => {
                                     return (
                                       <li key={idx}>
-                                        <a href="#">{i}</a>
+                                        <a href={`/shops/${i}`}>{i}</a>
                                       </li>
                                     );
                                   })}

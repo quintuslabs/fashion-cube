@@ -1768,6 +1768,68 @@ ul.stander li a {
   padding: 10px;
 }
 
+.empty--basket {
+  height: 100%;
+  margin-top: 25%;
+}
+
+.empty--basket > h4 {
+  color: #82828285;
+  margin-bottom: 20px;
+}
+
+.basket--item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.basket--item--img {
+  width: 100px;
+  height: 100px;
+}
+
+.basket--item--img > img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.basket--item--title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+.basket--item--quantity {
+  font-size: 16px;
+}
+.basket--item--quantity > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.basket--item--price {
+  font-size: 16px;
+}
+.basket--item--price > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.modal-header > .checkout--btn {
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 7px;
+  cursor: pointer;
+  background-color: #db5246;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -1784,4 +1846,68 @@ ul.stander li a {
   to {
     opacity: 1;
   }
+}
+
+.error-container {
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: montserrat, sans-serif;
+}
+
+.big-text {
+  font-size: 200px;
+  font-weight: 900;
+  font-family: sans-serif;
+  background: url(https://cdn.pixabay.com/photo/2018/05/30/15/39/thunderstorm-3441687_960_720.jpg)
+    no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+}
+
+.small-text {
+  font-family: montserrat, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.home-page-button {
+  color: #fff;
+  padding: 12px 36px;
+  font-weight: 600;
+  border: none;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+  margin: 2px;
+  margin-top: 2px;
+  background-image: linear-gradient(
+    to right,
+    #09b3ef 0%,
+    #1e50e2 51%,
+    #09b3ef 100%
+  );
+  background-size: 200% auto;
+  flex: 1 1 auto;
+  text-decoration: none;
+}
+
+.home-page-button:hover,
+.home-page-button:focus {
+  color: #ffffff;
+  background-position: right center;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }

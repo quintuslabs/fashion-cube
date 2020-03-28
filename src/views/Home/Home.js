@@ -10,11 +10,15 @@ import Benefit from "../../components/Benefit";
 import Advertisement from "../../components/Advertisement";
 import PropTypes from "prop-types";
 import jumpTo from "../../modules/Navigation";
+import LoginRegister from "../../components/LoginRegisterModal";
+
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null
+      data: null,
+      modalShow: false,
+      login: true
     };
     this.addToBag = this.addToBag.bind(this);
   }
@@ -25,12 +29,30 @@ class Home extends Component {
     }
   }
 
+  showHideModal = () => {
+    this.setState({ modalShow: false });
+  };
+
+  loginClicked = () => {
+    this.setState({ modalShow: true, login: true });
+  };
+  registerClicked = () => {
+    this.setState({ modalShow: true, login: false });
+  };
+
   addToBag = params => {
-    let cart = this.props.postCart(params);
-    cart.then(res => {
-      console.log(res);
-      // window.location.reload();
-    });
+    if (
+      Auth.getUserDetails() !== undefined &&
+      Auth.getUserDetails() !== null &&
+      Auth.getToken() !== undefined
+    ) {
+      let cart = this.props.postCart(params);
+      cart.then(res => {
+        console.log(res);
+      });
+    } else {
+      this.setState({ modalShow: true });
+    }
   };
 
   render() {
@@ -55,6 +77,13 @@ class Home extends Component {
             addToBag={this.addToBag}
           />
         ) : null}
+        <LoginRegister
+          show={this.state.modalShow}
+          login={this.state.login}
+          registerClicked={() => this.registerClicked()}
+          loginClicked={() => this.loginClicked()}
+          onHide={() => this.showHideModal()}
+        />
       </div>
     );
   }

@@ -80,8 +80,8 @@ class TopNavBar extends Component {
                       </li>
                     </ul>
                   </li>
-                  {Auth.getUserDetails !== undefined &&
-                  Auth.getUserDetails !== null &&
+                  {Auth.getUserDetails() !== undefined &&
+                  Auth.getUserDetails() !== null &&
                   Auth.getToken() !== undefined ? (
                     <li className="account">
                       <a href="#">

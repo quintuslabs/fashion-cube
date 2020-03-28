@@ -7,6 +7,7 @@ import BaseLayout from "../layouts/BaseLayout";
 // Route Views
 import Home from "../views/Home/HomeContainer";
 import SingleProductContainer from "../views/Product/SingleProductContainer";
+import CategoryContainer from "../views/Category/CategoryContainer";
 
 var routes = [
   {
@@ -24,6 +25,11 @@ var routes = [
     path: "/single-product/:id",
     layout: BaseLayout,
     component: SingleProductContainer
+  },
+  {
+    path: "/shops/:category",
+    layout: BaseLayout,
+    component: CategoryContainer
   }
 ];
 

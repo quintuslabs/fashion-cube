@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import LoginRegister from "../../components/LoginRegisterModal";
+import Auth from "../../modules/Auth";
+
 class SingleProduct extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +11,9 @@ class SingleProduct extends Component {
       pic: "",
       selectedSize: "",
       id: "",
-      quantity: 1
+      quantity: 1,
+      modalShow: false,
+      login: true
     };
   }
   componentDidMount() {
@@ -17,6 +22,17 @@ class SingleProduct extends Component {
       this.props.location.pathname.split("/").slice(-1)[0]
     );
   }
+
+  showHideModal = () => {
+    this.setState({ modalShow: false });
+  };
+
+  loginClicked = () => {
+    this.setState({ modalShow: true, login: true });
+  };
+  registerClicked = () => {
+    this.setState({ modalShow: true, login: false });
+  };
 
   handleThumbnailClick = item => {
     this.setState({
@@ -38,13 +54,21 @@ class SingleProduct extends Component {
   };
 
   addToBag = () => {
-    this.props
-      .postCart(
-        this.state.id || this.props.location.pathname.split("/").slice(-1)[0]
-      )
-      .then(res => {
-        console.log(res);
-      });
+    if (
+      Auth.getUserDetails() !== undefined &&
+      Auth.getUserDetails() !== null &&
+      Auth.getToken() !== undefined
+    ) {
+      this.props
+        .postCart(
+          this.state.id || this.props.location.pathname.split("/").slice(-1)[0]
+        )
+        .then(res => {
+          console.log(res);
+        });
+    } else {
+      this.setState({ modalShow: true });
+    }
   };
 
   render() {
@@ -202,6 +226,14 @@ class SingleProduct extends Component {
             </div>
           </div>
         )}
+
+        <LoginRegister
+          show={this.state.modalShow}
+          login={this.state.login}
+          registerClicked={() => this.registerClicked()}
+          loginClicked={() => this.loginClicked()}
+          onHide={() => this.showHideModal()}
+        />
       </div>
     );
   }

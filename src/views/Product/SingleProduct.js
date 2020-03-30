@@ -40,14 +40,26 @@ class SingleProduct extends Component {
       size: item.size,
       pic: item.imagePath,
       selectedSize: "",
-      id: item._id
+      id: item._id,
+      cartItem: null
     });
   };
 
   onAddClicked = () => {
     this.setState({ quantity: this.state.quantity + 1 });
+    this.props.postCart(
+      this.state.id || this.props.location.pathname.split("/").slice(-1)[0],
+      true,
+      false
+    );
   };
   onRemoveClicked = () => {
+    this.props.postCart(
+      this.state.id || this.props.location.pathname.split("/").slice(-1)[0],
+      false,
+      true
+    );
+
     if (this.state.quantity > 1) {
       this.setState({ quantity: this.state.quantity - 1 });
     }
@@ -71,7 +83,27 @@ class SingleProduct extends Component {
     }
   };
 
+  productInCart = () => {
+    let available = false;
+    // let items = this.props.cart.items;
+    // if (items !== undefined && items !== null) {
+    //   let itemCheck = Object.keys(items).map(
+    //     id => items[id].item.title === this.props.product.title
+    //   );
+
+    //   if (itemCheck !== undefined && itemCheck !== null) {
+    //     this.setState({ cartItem: itemCheck });
+    //     available = true;
+    //   } else {
+    //     available = false;
+    //   }
+    // }
+
+    return available;
+  };
+
   render() {
+    console.log(this.props);
     return (
       <div className="container single_product_container">
         {this.props.product && (
@@ -187,6 +219,7 @@ class SingleProduct extends Component {
                   </div>
                   <div className="quantity d-flex flex-column flex-sm-row align-items-sm-center">
                     <span>Quantity:</span>
+
                     <div className="quantity_selector">
                       <span
                         className={
@@ -204,6 +237,7 @@ class SingleProduct extends Component {
                         <i className="fa fa-plus" aria-hidden="true"></i>
                       </span>
                     </div>
+
                     <div
                       className="red_button product-add_to_cart_button"
                       onClick={this.addToBag}

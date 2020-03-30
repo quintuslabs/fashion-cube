@@ -6,7 +6,8 @@ import { postCart } from "../../redux/actions/cartAction";
 
 const mapStoreToProps = state => ({
   product: state.product.product,
-  variants: state.variant.variants
+  variants: state.variant.variants,
+  cart: state.cart.cart
 });
 const mapDispatchToProps = {
   getProduct,

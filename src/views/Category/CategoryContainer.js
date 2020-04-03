@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
   postCart: productId => dispatch(postCart(productId))
 });
 
-export default connect(mapDispatchToProps)(Category);
+export default connect(mapStoreToProps, mapDispatchToProps)(Category);

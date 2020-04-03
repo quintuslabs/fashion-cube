@@ -2031,3 +2031,191 @@ ul.stander li a {
 .show_more span:first-child {
   margin-right: 11px;
 }
+
+/*********************************
+4.1 Product Sorting
+*********************************/
+
+.product_sorting_container_bottom {
+  margin-top: 24px;
+}
+.product_sorting_container_bottom .product_sorting {
+  float: right;
+}
+.product_sorting {
+  display: inline-block;
+}
+.product_sorting > li {
+  display: inline-block;
+  position: relative;
+  width: 185px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  border: solid 1px #ecedee;
+  padding-left: 20px;
+  padding-right: 7px;
+  margin-right: 16px;
+}
+.product_sorting_container_bottom .product_sorting > li {
+  width: 144px;
+  margin-right: 0px;
+  padding-right: 12px;
+}
+.product_sorting_container_bottom .product_sorting li span:nth-child(2) {
+  margin-left: 24px;
+}
+.product_sorting li i {
+  float: right;
+  line-height: 40px;
+  color: #51545f;
+}
+.product_sorting li ul {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 120%;
+  margin: 0;
+  width: 100%;
+  background: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  box-shadow: 0 15px 25px rgba(63, 78, 100, 0.15);
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+}
+.product_sorting > li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: calc(100% + 1px);
+}
+.product_sorting li ul li {
+  display: block;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.product_sorting li ul li span {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: solid 1px #dddddd;
+  color: #51545f;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+}
+.product_sorting li ul li span:hover {
+  color: #b5aec4;
+}
+.product_sorting li ul li:last-child span {
+  border-bottom: none;
+}
+.product_sorting li span:nth-child(2) {
+  margin-left: 71px;
+}
+.pages {
+  display: inline-block;
+  float: right;
+}
+.product_sorting_container_bottom .pages {
+  float: left;
+}
+.page_current {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  text-align: center;
+  border: solid 1px #ecedee;
+  margin-right: 16px;
+}
+.product_sorting_container_bottom .pages .page_current {
+  background: #fe4c50;
+  border: none;
+}
+.page_current span {
+  color: #51545f;
+}
+.product_sorting_container_bottom .pages .page_current span {
+  color: #ffffff;
+}
+.page_selection {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 120%;
+  margin: 0;
+  width: 100%;
+  background: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  box-shadow: 0 15px 25px rgba(63, 78, 100, 0.15);
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+}
+.page_selection li {
+  display: block;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.page_selection li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: solid 1px #dddddd;
+  color: #51545f;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+}
+.page_selection li a:hover {
+  color: #b5aec4;
+}
+.page_current:hover .page_selection {
+  visibility: visible;
+  opacity: 1;
+  top: calc(100% + 1px);
+}
+.page_total {
+  display: inline-block;
+  line-height: 40px;
+  margin-right: 31px;
+}
+.page_total span {
+  margin-right: 14px;
+}
+.page_next {
+  display: inline-block;
+  line-height: 40px;
+  cursor: pointer;
+}
+.page_next:hover i {
+  color: #b5aec4;
+}
+.page_next i {
+  font-size: 18px;
+  color: #51545f;
+}
+.showing_results {
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  float: right;
+  margin-right: 34px;
+}

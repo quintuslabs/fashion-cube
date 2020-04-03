@@ -6,7 +6,6 @@ class NewArrivals extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: "All",
       products: this.props.products,
       productsBAK: this.props.products,
       departments: this.props.departments
@@ -25,9 +24,6 @@ class NewArrivals extends Component {
     this.setState({ selectedOption: option });
   }
 
-  addToBag = id => {
-    console.log(id);
-  };
   render() {
     const { products, departments } = this.state;
 

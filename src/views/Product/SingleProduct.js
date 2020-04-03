@@ -1,3 +1,9 @@
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
 import React, { Component } from "react";
 import LoginRegister from "../../components/LoginRegisterModal";
 import Auth from "../../modules/Auth";

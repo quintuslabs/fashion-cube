@@ -1,12 +1,18 @@
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
 export const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px'
-}
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px"
+};
 const device = {
   min: {
     mobileS: `(min-width: ${size.mobileS})`,
@@ -27,7 +33,7 @@ const device = {
     laptopL: `(max-width: ${size.laptopL})`,
     desktop: `(max-width: ${size.desktop})`,
     desktopL: `(max-width: ${size.desktop})`
-  },
+  }
 };
 
-export default device
+export default device;

@@ -1,3 +1,9 @@
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
 import { login } from "../../ServerRequest";
 
 export const userLogin = (email, password) => dispatch => {

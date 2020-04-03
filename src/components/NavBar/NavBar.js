@@ -1,4 +1,10 @@
-import React, { Component } from "react";
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
+React, { Component } from "react";
 import { Link } from "react-router-dom";
 import HomeCartView from "../HomeCartView";
 

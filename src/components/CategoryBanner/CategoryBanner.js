@@ -1,3 +1,9 @@
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
 import React from "react";
 import Banner1 from "../../assets/images/banner_1.jpg";
 import Banner2 from "../../assets/images/banner_2.jpg";

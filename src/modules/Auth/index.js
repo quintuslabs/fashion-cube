@@ -1,3 +1,9 @@
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
 class Auth {
   constructor() {
     this.user_token = JSON.parse(localStorage.getItem("auth")) || {};

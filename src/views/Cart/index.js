@@ -1,3 +1,9 @@
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
 import { connect } from "react-redux";
 import Cart from "./Cart";
 import { getCartByUserId, postCart } from "../../redux/actions/cartAction";

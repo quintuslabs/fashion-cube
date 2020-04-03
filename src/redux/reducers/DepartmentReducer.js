@@ -1,3 +1,9 @@
+/*
+ ** Author: Santosh Kumar Dash
+ ** Author URL: http://santoshdash.epizy.com/
+ ** Github URL: https://github.com/quintuslabs/fashion-cube
+ */
+
 import {
   GET_DEPARTMENTS_BEGIN,
   GET_DEPARTMENTS_SUCCESS,

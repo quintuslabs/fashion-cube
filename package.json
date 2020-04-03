@@ -2,6 +2,17 @@
   "name": "fashioncube",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quintuslabs/fashion-cube"
+  },
+  "keywords": [
+    "fashion",
+    "fashion-cube",
+    "e-commerce",
+    "shopping",
+    "Shopping cart"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

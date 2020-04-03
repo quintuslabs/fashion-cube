@@ -4,7 +4,7 @@
  ** Github URL: https://github.com/quintuslabs/fashion-cube
  */
 
-React, { Component } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import HomeCartView from "../HomeCartView";
 

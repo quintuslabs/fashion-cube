@@ -11,14 +11,14 @@ import { Redirect } from "react-router-dom";
 // Layout Types
 import BaseLayout from "../layouts/BaseLayout";
 
-import CartContainer from "../views/Cart";
+import CartContainer from "../views/Cart/CartContainer";
 
 var PrivateRoutes = [
   {
     path: "/cart",
     layout: BaseLayout,
-    component: CartContainer
-  }
+    component: CartContainer,
+  },
 ];
 
 export default PrivateRoutes;

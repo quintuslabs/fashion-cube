@@ -10,15 +10,15 @@ import { getProduct } from "../../redux/actions/productAction";
 import { getVariantsByProductId } from "../../redux/actions/variantsAction";
 import { postCart } from "../../redux/actions/cartAction";
 
-const mapStoreToProps = state => ({
+const mapStoreToProps = (state) => ({
   product: state.product.product,
   variants: state.variant.variants,
-  cart: state.cart.cart
+  cart: state.cart.cart,
 });
-const mapDispatchToProps = {
+const mapDispatchToProps = (dispatch) => ({
   getProduct,
   getVariantsByProductId,
-  postCart
-};
+  postCart,
+});
 
 export default connect(mapStoreToProps, mapDispatchToProps)(SingleProduct);

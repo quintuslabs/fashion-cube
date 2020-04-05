@@ -14,7 +14,7 @@ class BaseLayout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      topHaderClass: "show"
+      topHaderClass: "show",
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -31,7 +31,7 @@ class BaseLayout extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll = event => {
+  handleScroll = (event) => {
     if (window.scrollY >= 50) {
       this.setState({ topHaderClass: "hide" });
     } else {
@@ -46,9 +46,6 @@ class BaseLayout extends Component {
             <TopNavBar className={this.state.topHaderClass} />
             <NavBarContainer />
           </header>
-          <div className="fs_menu_overlay"></div>
-          <MobileMenu />
-
           <div className="layout-Container">{this.props.children}</div>
           <Footer />
         </div>

@@ -5,6 +5,7 @@
  */
 
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class MobileMenu extends Component {
   constructor(props) {
@@ -13,8 +14,12 @@ class MobileMenu extends Component {
   }
   render() {
     return (
-      <div className="hamburger_menu">
-        <div className="hamburger_close">
+      <div
+        className={
+          this.props.activeClass ? "hamburger_menu active" : "hamburger_menu"
+        }
+      >
+        <div className="hamburger_close" onClick={this.props.onClose}>
           <i className="fa fa-times" aria-hidden="true"></i>
         </div>
         <div className="hamburger_menu_content text-right">
@@ -102,5 +107,9 @@ class MobileMenu extends Component {
     );
   }
 }
+MobileMenu.propTypes = {
+  activeClass: PropTypes.bool,
+  onClose: PropTypes.func,
+};
 
 export default MobileMenu;

@@ -54,7 +54,7 @@ class HomeCartView extends Component {
 
           {items !== undefined &&
             items !== null &&
-            Object.keys(items).map(id => {
+            Object.keys(items).map((id) => {
               return (
                 <div key={id} className="basket--item">
                   <div className="basket--item--img">
@@ -83,6 +83,7 @@ class HomeCartView extends Component {
               <button
                 className="btn btn-wide log-btn"
                 style={{ marginTop: 20 }}
+                onClick={() => this.goToChechout()}
               >
                 Checkout
               </button>

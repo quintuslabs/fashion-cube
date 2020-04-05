@@ -7,12 +7,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import HomeCartView from "../HomeCartView";
+import MobileMenu from "../MobileMenu";
+import device, { size } from "../../modules/mediaQuery";
+import MediaQuery from "react-responsive";
 
 class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalShow: false
+      modalShow: false,
+      activeclass: false,
     };
   }
 
@@ -26,6 +30,9 @@ class NavBar extends Component {
     this.setState({ modalShow: !this.state.modalShow });
   };
 
+  handleMenuClicked = () => {
+    this.setState({ activeclass: !this.state.activeclass });
+  };
   render() {
     const { departments, cart } = this.props;
 
@@ -102,13 +109,22 @@ class NavBar extends Component {
                     </a>
                   </li>
                 </ul>
-                <div className="hamburger_container">
+                <div
+                  className="hamburger_container"
+                  onClick={() => this.handleMenuClicked()}
+                >
                   <i className="fa fa-bars" aria-hidden="true"></i>
                 </div>
               </nav>
             </div>
           </div>
         </div>
+        <MediaQuery query={device.max.tabletL}>
+          <MobileMenu
+            activeClass={this.state.activeclass}
+            onClose={() => this.handleMenuClicked()}
+          />
+        </MediaQuery>
         {this.state.modalShow ? (
           <HomeCartView
             cart={cart}

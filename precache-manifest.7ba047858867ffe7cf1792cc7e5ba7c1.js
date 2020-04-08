@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47c4f9ea27e4b3e902ef85e539968b8d",
+    "revision": "c3f64acff9b4430f513d5b984bc3180d",
     "url": "/fashion-cube/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fashion-cube/static/css/2.21900056.chunk.css"
   },
   {
-    "revision": "63f92cab06ad41117143",
+    "revision": "15c8e0d2e6d848e06924",
     "url": "/fashion-cube/static/css/main.4c401025.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fashion-cube/static/js/2.39479348.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "63f92cab06ad41117143",
-    "url": "/fashion-cube/static/js/main.6a1637d1.chunk.js"
+    "revision": "15c8e0d2e6d848e06924",
+    "url": "/fashion-cube/static/js/main.2c2f5445.chunk.js"
   },
   {
     "revision": "b6da803c473f3c570ef1",

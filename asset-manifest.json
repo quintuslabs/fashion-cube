@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/fashion-cube/static/css/main.4c401025.chunk.css",
+    "main.js": "/fashion-cube/static/js/main.6a1637d1.chunk.js",
+    "main.js.map": "/fashion-cube/static/js/main.6a1637d1.chunk.js.map",
+    "runtime-main.js": "/fashion-cube/static/js/runtime-main.a0d47386.js",
+    "runtime-main.js.map": "/fashion-cube/static/js/runtime-main.a0d47386.js.map",
+    "static/css/2.21900056.chunk.css": "/fashion-cube/static/css/2.21900056.chunk.css",
+    "static/js/2.39479348.chunk.js": "/fashion-cube/static/js/2.39479348.chunk.js",
+    "static/js/2.39479348.chunk.js.map": "/fashion-cube/static/js/2.39479348.chunk.js.map",
+    "index.html": "/fashion-cube/index.html",
+    "precache-manifest.6970bc46fbbf8a6cb696125121af511d.js": "/fashion-cube/precache-manifest.6970bc46fbbf8a6cb696125121af511d.js",
+    "service-worker.js": "/fashion-cube/service-worker.js",
+    "static/css/2.21900056.chunk.css.map": "/fashion-cube/static/css/2.21900056.chunk.css.map",
+    "static/css/main.4c401025.chunk.css.map": "/fashion-cube/static/css/main.4c401025.chunk.css.map",
+    "static/js/2.39479348.chunk.js.LICENSE.txt": "/fashion-cube/static/js/2.39479348.chunk.js.LICENSE.txt",
+    "static/media/banner_1.jpg": "/fashion-cube/static/media/banner_1.fd4db0ff.jpg",
+    "static/media/banner_2.jpg": "/fashion-cube/static/media/banner_2.f77e8fe9.jpg",
+    "static/media/banner_3.jpg": "/fashion-cube/static/media/banner_3.67bb10f2.jpg",
+    "static/media/deal_ofthe_week.png": "/fashion-cube/static/media/deal_ofthe_week.18a6bbdf.png",
+    "static/media/emptyCart.png": "/fashion-cube/static/media/emptyCart.02800820.png",
+    "static/media/empty_cart.png": "/fashion-cube/static/media/empty_cart.abebef23.png",
+    "static/media/slider_1.jpg": "/fashion-cube/static/media/slider_1.55f6732a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a0d47386.js",
+    "static/css/2.21900056.chunk.css",
+    "static/js/2.39479348.chunk.js",
+    "static/css/main.4c401025.chunk.css",
+    "static/js/main.6a1637d1.chunk.js"
+  ]
+}

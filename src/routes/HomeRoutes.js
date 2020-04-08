@@ -17,26 +17,27 @@ import CategoryContainer from "../views/Category/CategoryContainer";
 
 var routes = [
   {
-    path: "/",
+    path: "/fashion-cube",
     exact: true,
     layout: BaseLayout,
-    component: Home
+    component: Home,
   },
+
   {
     path: "/home",
     layout: BaseLayout,
-    component: () => <Redirect to="/" />
+    component: () => <Redirect to="/fashion-cube" />,
   },
   {
-    path: "/single-product/:id",
+    path: "/fashion-cube/single-product/:id",
     layout: BaseLayout,
-    component: SingleProductContainer
+    component: SingleProductContainer,
   },
   {
-    path: "/shops/:category",
+    path: "/fashion-cube/shops/:category",
     layout: BaseLayout,
-    component: CategoryContainer
-  }
+    component: CategoryContainer,
+  },
 ];
 
 export default routes;

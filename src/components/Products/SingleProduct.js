@@ -13,7 +13,9 @@ function SingleProduct(props) {
     <div className="product-item men">
       <div
         className="product discount product_filter"
-        onClick={() => jumpTo(`/single-product/${productItem._id}`)}
+        onClick={() =>
+          jumpTo(`/fashion-cube/single-product/${productItem._id}`)
+        }
       >
         <div className="product_image">
           <img src={productItem.imagePath} alt="" className="img-fluid" />

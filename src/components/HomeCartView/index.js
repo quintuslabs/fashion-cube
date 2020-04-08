@@ -17,7 +17,7 @@ class HomeCartView extends Component {
   }
 
   goToChechout = () => {
-    jumpTo("/cart");
+    jumpTo("/fashion-cube/cart");
   };
   render() {
     const { items, totalPrice } = this.props.cart;

@@ -42,7 +42,7 @@ class NavBar extends Component {
           <div className="row">
             <div className="col-lg-12 text-right">
               <div className="logo_container">
-                <Link to="/">
+                <Link to="/fashion-cube">
                   Fashion<span>Cube</span>
                 </Link>
               </div>
@@ -68,7 +68,7 @@ class NavBar extends Component {
                                     return (
                                       <li key={idx}>
                                         <a
-                                          href={`/shops/${item.departmentName}/${i}`}
+                                          href={`/fashion-cube/shops/${item.departmentName}/${i}`}
                                         >
                                           {i}
                                         </a>

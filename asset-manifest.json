@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fashion-cube/static/css/main.4c401025.chunk.css",
-    "main.js": "/fashion-cube/static/js/main.1cdbbb3a.chunk.js",
-    "main.js.map": "/fashion-cube/static/js/main.1cdbbb3a.chunk.js.map",
+    "main.js": "/fashion-cube/static/js/main.422dfe7f.chunk.js",
+    "main.js.map": "/fashion-cube/static/js/main.422dfe7f.chunk.js.map",
     "runtime-main.js": "/fashion-cube/static/js/runtime-main.a0d47386.js",
     "runtime-main.js.map": "/fashion-cube/static/js/runtime-main.a0d47386.js.map",
     "static/css/2.21900056.chunk.css": "/fashion-cube/static/css/2.21900056.chunk.css",
     "static/js/2.39479348.chunk.js": "/fashion-cube/static/js/2.39479348.chunk.js",
     "static/js/2.39479348.chunk.js.map": "/fashion-cube/static/js/2.39479348.chunk.js.map",
     "index.html": "/fashion-cube/index.html",
-    "precache-manifest.d3afbe55220d0b836d156a6ee8352001.js": "/fashion-cube/precache-manifest.d3afbe55220d0b836d156a6ee8352001.js",
+    "precache-manifest.9ae0b86d1b7ba062d648fbc5da97cc12.js": "/fashion-cube/precache-manifest.9ae0b86d1b7ba062d648fbc5da97cc12.js",
     "service-worker.js": "/fashion-cube/service-worker.js",
     "static/css/2.21900056.chunk.css.map": "/fashion-cube/static/css/2.21900056.chunk.css.map",
     "static/css/main.4c401025.chunk.css.map": "/fashion-cube/static/css/main.4c401025.chunk.css.map",
@@ -27,6 +27,6 @@
     "static/css/2.21900056.chunk.css",
     "static/js/2.39479348.chunk.js",
     "static/css/main.4c401025.chunk.css",
-    "static/js/main.1cdbbb3a.chunk.js"
+    "static/js/main.422dfe7f.chunk.js"
   ]
 }

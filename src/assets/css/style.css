@@ -166,14 +166,12 @@ h6::selection {
   font-weight: 500;
   color: #777777 !important;
 }
-:-moz-placeholder /* older Firefox*/
- {
+:-moz-placeholder /* older Firefox*/ {
   font-size: 16px !important;
   font-weight: 500;
   color: #777777 !important;
 }
-::-moz-placeholder /* Firefox 19+ */
- {
+::-moz-placeholder /* Firefox 19+ */ {
   font-size: 16px !important;
   font-weight: 500;
   color: #777777 !important;
@@ -806,11 +804,10 @@ section {
 
 .main_slider {
   width: 100%;
-  height: 700px;
+  height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-top: 150px;
 }
 .main_slider_content {
   width: 60%;
@@ -1617,14 +1614,12 @@ span.minus.disabled {
   font-weight: 400;
   color: #b9b4c7 !important;
 }
-#newsletter_email:-moz-placeholder /* older Firefox*/
- {
+#newsletter_email:-moz-placeholder /* older Firefox*/ {
   font-size: 14px !important;
   font-weight: 400;
   color: #b9b4c7 !important;
 }
-#newsletter_email::-moz-placeholder /* Firefox 19+ */
- {
+#newsletter_email::-moz-placeholder /* Firefox 19+ */ {
   font-size: 14px !important;
   font-weight: 400;
   color: #b9b4c7 !important;

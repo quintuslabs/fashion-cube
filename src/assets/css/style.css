@@ -1463,6 +1463,7 @@ section {
 .star_rating {
   display: inline-block;
   margin-left: 33px;
+  width: 20%;
 }
 .star_rating li {
   display: inline-block;

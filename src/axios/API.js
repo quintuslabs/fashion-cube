@@ -7,26 +7,26 @@
 import Auth from "../modules/Auth";
 import jumpTo from "../modules/Navigation";
 import axios from "axios";
-const URL = "https://zack-ecommerce-nodejs.herokuapp.com";
+const URL = "http://192.168.0.19:3000";
 
-const API = config => {
+const API = (config) => {
   //header authorization
   if (Auth.user_token) {
     const token = Auth.getToken();
     config.headers = {
-      authorization: token
+      authorization: token,
     };
   }
   //interceptors handle network error
   axios.interceptors.response.use(
-    response => {
+    (response) => {
       return response;
     },
-    function(error) {
+    function (error) {
       if (!error.response) {
         error.response = {
           data: "net work error",
-          status: 500
+          status: 500,
         };
       }
       if (error.response.status === 401) {

@@ -13,12 +13,11 @@ import { postCart } from "../../redux/actions/cartAction";
 const mapStoreToProps = (state) => ({
   product: state.product.product,
   variants: state.variant.variants,
-  cart: state.cart.cart,
 });
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = {
   getProduct,
   getVariantsByProductId,
   postCart,
-});
+};
 
 export default connect(mapStoreToProps, mapDispatchToProps)(SingleProduct);

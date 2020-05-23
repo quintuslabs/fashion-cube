@@ -19,7 +19,7 @@ class SingleProduct extends Component {
       id: "",
       quantity: 1,
       modalShow: false,
-      login: true
+      login: true,
     };
   }
   componentDidMount() {
@@ -40,14 +40,14 @@ class SingleProduct extends Component {
     this.setState({ modalShow: true, login: false });
   };
 
-  handleThumbnailClick = item => {
+  handleThumbnailClick = (item) => {
     this.setState({
       color: item.color,
       size: item.size,
       pic: item.imagePath,
       selectedSize: "",
       id: item._id,
-      cartItem: null
+      cartItem: null,
     });
   };
 
@@ -81,7 +81,7 @@ class SingleProduct extends Component {
         .postCart(
           this.state.id || this.props.location.pathname.split("/").slice(-1)[0]
         )
-        .then(res => {
+        .then((res) => {
           console.log(res);
         });
     } else {
@@ -170,8 +170,9 @@ class SingleProduct extends Component {
                         <div
                           className="single_product_image_background"
                           style={{
-                            backgroundImage: `url(${this.state.pic ||
-                              this.props.product.imagePath})`
+                            backgroundImage: `url(${
+                              this.state.pic || this.props.product.imagePath
+                            })`,
                           }}
                         />
                       </div>

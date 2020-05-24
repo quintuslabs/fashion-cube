@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd1f587d2a70fb5178f06f3a85d49fe9",
+    "revision": "b08324850ff99d669825d626426fd45d",
     "url": "/fashion-cube/index.html"
   },
   {
-    "revision": "0ff16a2a053280515e98",
+    "revision": "268c4e1721cbfa084007",
     "url": "/fashion-cube/static/css/2.21900056.chunk.css"
   },
   {
-    "revision": "3e30eea7966636ac3037",
-    "url": "/fashion-cube/static/css/main.4c401025.chunk.css"
+    "revision": "85ae31147118de388abc",
+    "url": "/fashion-cube/static/css/main.4513ddd2.chunk.css"
   },
   {
-    "revision": "0ff16a2a053280515e98",
-    "url": "/fashion-cube/static/js/2.39479348.chunk.js"
+    "revision": "268c4e1721cbfa084007",
+    "url": "/fashion-cube/static/js/2.8892b3d1.chunk.js"
   },
   {
     "revision": "799df9b1668a25ec1cff125566e8bb1e",
-    "url": "/fashion-cube/static/js/2.39479348.chunk.js.LICENSE.txt"
+    "url": "/fashion-cube/static/js/2.8892b3d1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3e30eea7966636ac3037",
-    "url": "/fashion-cube/static/js/main.2c5c6a71.chunk.js"
+    "revision": "85ae31147118de388abc",
+    "url": "/fashion-cube/static/js/main.e7c44b88.chunk.js"
   },
   {
     "revision": "b6da803c473f3c570ef1",
@@ -52,7 +52,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fashion-cube/static/media/empty_cart.abebef23.png"
   },
   {
-    "revision": "55f6732aec2e1b8da70f0b6085650a98",
-    "url": "/fashion-cube/static/media/slider_1.55f6732a.jpg"
+    "revision": "dc7970a3ddb8a96a0f4f74bd17d05c24",
+    "url": "/fashion-cube/static/media/slider_1.dc7970a3.jpg"
+  },
+  {
+    "revision": "a5bc9e893257dc0c821b846e32c7170d",
+    "url": "/fashion-cube/static/media/slider_2.a5bc9e89.jpg"
+  },
+  {
+    "revision": "035f02ed5a4bc5be22aff5b9e6a1c3d1",
+    "url": "/fashion-cube/static/media/slider_3.035f02ed.jpg"
   }
 ]);

@@ -1,32 +1,34 @@
 {
   "files": {
-    "main.css": "/fashion-cube/static/css/main.4c401025.chunk.css",
-    "main.js": "/fashion-cube/static/js/main.2c5c6a71.chunk.js",
-    "main.js.map": "/fashion-cube/static/js/main.2c5c6a71.chunk.js.map",
+    "main.css": "/fashion-cube/static/css/main.4513ddd2.chunk.css",
+    "main.js": "/fashion-cube/static/js/main.e7c44b88.chunk.js",
+    "main.js.map": "/fashion-cube/static/js/main.e7c44b88.chunk.js.map",
     "runtime-main.js": "/fashion-cube/static/js/runtime-main.a0d47386.js",
     "runtime-main.js.map": "/fashion-cube/static/js/runtime-main.a0d47386.js.map",
     "static/css/2.21900056.chunk.css": "/fashion-cube/static/css/2.21900056.chunk.css",
-    "static/js/2.39479348.chunk.js": "/fashion-cube/static/js/2.39479348.chunk.js",
-    "static/js/2.39479348.chunk.js.map": "/fashion-cube/static/js/2.39479348.chunk.js.map",
+    "static/js/2.8892b3d1.chunk.js": "/fashion-cube/static/js/2.8892b3d1.chunk.js",
+    "static/js/2.8892b3d1.chunk.js.map": "/fashion-cube/static/js/2.8892b3d1.chunk.js.map",
     "index.html": "/fashion-cube/index.html",
-    "precache-manifest.9de254d513fc50c909d4d394e90f937b.js": "/fashion-cube/precache-manifest.9de254d513fc50c909d4d394e90f937b.js",
+    "precache-manifest.6239a5780854c6a200735067ab4b0f76.js": "/fashion-cube/precache-manifest.6239a5780854c6a200735067ab4b0f76.js",
     "service-worker.js": "/fashion-cube/service-worker.js",
     "static/css/2.21900056.chunk.css.map": "/fashion-cube/static/css/2.21900056.chunk.css.map",
-    "static/css/main.4c401025.chunk.css.map": "/fashion-cube/static/css/main.4c401025.chunk.css.map",
-    "static/js/2.39479348.chunk.js.LICENSE.txt": "/fashion-cube/static/js/2.39479348.chunk.js.LICENSE.txt",
+    "static/css/main.4513ddd2.chunk.css.map": "/fashion-cube/static/css/main.4513ddd2.chunk.css.map",
+    "static/js/2.8892b3d1.chunk.js.LICENSE.txt": "/fashion-cube/static/js/2.8892b3d1.chunk.js.LICENSE.txt",
     "static/media/banner_1.jpg": "/fashion-cube/static/media/banner_1.fd4db0ff.jpg",
     "static/media/banner_2.jpg": "/fashion-cube/static/media/banner_2.f77e8fe9.jpg",
     "static/media/banner_3.jpg": "/fashion-cube/static/media/banner_3.67bb10f2.jpg",
     "static/media/deal_ofthe_week.png": "/fashion-cube/static/media/deal_ofthe_week.18a6bbdf.png",
     "static/media/emptyCart.png": "/fashion-cube/static/media/emptyCart.02800820.png",
     "static/media/empty_cart.png": "/fashion-cube/static/media/empty_cart.abebef23.png",
-    "static/media/slider_1.jpg": "/fashion-cube/static/media/slider_1.55f6732a.jpg"
+    "static/media/slider_1.jpg": "/fashion-cube/static/media/slider_1.dc7970a3.jpg",
+    "static/media/slider_2.jpg": "/fashion-cube/static/media/slider_2.a5bc9e89.jpg",
+    "static/media/slider_3.jpg": "/fashion-cube/static/media/slider_3.035f02ed.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a0d47386.js",
     "static/css/2.21900056.chunk.css",
-    "static/js/2.39479348.chunk.js",
-    "static/css/main.4c401025.chunk.css",
-    "static/js/main.2c5c6a71.chunk.js"
+    "static/js/2.8892b3d1.chunk.js",
+    "static/css/main.4513ddd2.chunk.css",
+    "static/js/main.e7c44b88.chunk.js"
   ]
 }

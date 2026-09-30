@@ -77,6 +77,11 @@ class SingleProduct extends Component {
       Auth.getUserDetails() !== null &&
       Auth.getToken() !== undefined
     ) {
+      const availableQty = this.state.quantityAvailable || this.props.product.quantity;
+      if (availableQty === 0) {
+        this.setState({ stockMessage: "This item is out of stock" });
+        return;
+      }
       this.props
         .postCart(
           this.state.id || this.props.location.pathname.split("/").slice(-1)[0]
@@ -110,6 +115,13 @@ class SingleProduct extends Component {
 
   render() {
     console.log(this.props);
+    const selectedVariant = this.props.variants && this.props.variants.find(
+      item => item._id === this.state.id
+    );
+    const availableQty = selectedVariant
+      ? selectedVariant.quantity
+      : this.props.product && this.props.product.quantity;
+
     return (
       <div className="container single_product_container">
         {this.props.product && (
@@ -199,6 +211,12 @@ class SingleProduct extends Component {
                   <div className="product_price">
                     ₹ {this.props.product.price}
                   </div>
+                  <div className="product_stock">
+                    Available stock: {availableQty}
+                  </div>
+                  {this.state.stockMessage && (
+                    <div className="text-danger">{this.state.stockMessage}</div>
+                  )}
                   <ul className="star_rating">
                     <li>
                       <i className="fa fa-star" aria-hidden="true"></i>
@@ -238,7 +256,11 @@ class SingleProduct extends Component {
                       </span>
                       <span id="quantity_value">{this.state.quantity}</span>
                       <span
-                        className="plus"
+                        className={
+                          this.state.quantity >= availableQty
+                            ? "plus disabled"
+                            : "plus"
+                        }
                         onClick={() => this.onAddClicked()}
                       >
                         <i className="fa fa-plus" aria-hidden="true"></i>

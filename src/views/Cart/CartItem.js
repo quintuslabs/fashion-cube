@@ -55,7 +55,11 @@ function CartItem({ items, handleClick }) {
                   </span>
                   <span id="quantity_value"> {items[id].qty}</span>
                   <span
-                    className="plus"
+                    className={
+                      items[id].qty >= items[id].item.quantity
+                        ? "plus disabled"
+                        : "plus"
+                    }
                     onClick={() => handleClick(id, true, false)}
                   >
                     <i className="fa fa-plus" aria-hidden="true"></i>

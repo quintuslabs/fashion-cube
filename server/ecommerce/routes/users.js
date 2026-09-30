@@ -125,6 +125,13 @@ router.post('/:userId/cart', ensureAuthenticated, function (req, res, next) {
         return next(e);
       }
       if (product) {
+        const currentItem = oldCart.items[product.id]
+        if (!decrease && currentItem && currentItem.qty > product.quantity) {
+          let err = new TypedError('/cart', 409, 'invalid_field', {
+            message: "Only " + product.quantity + " item(s) are available"
+          })
+          return next(err)
+        }
         if (decrease) {
           oldCart.decreaseQty(product.id);
         } else if (increase) {
@@ -153,6 +160,7 @@ router.post('/:userId/cart', ensureAuthenticated, function (req, res, next) {
               let size = (variant.size) ? "- " + variant.size : "";
               variant.title = p.title + " " + color + size
               variant.price = p.price
+              variant.quantity = p.quantity
               if (decrease) {
                 oldCart.decreaseQty(variant.id);
               } else if (increase) {
